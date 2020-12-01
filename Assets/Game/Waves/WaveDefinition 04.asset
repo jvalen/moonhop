@@ -1,0 +1,293 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e687e0baf211043b53837ff38a3a13, type: 3}
+  m_Name: WaveDefinition 04
+  m_EditorClassIdentifier: 
+  wave:
+    startWaveDelay: 1
+    shareActionDelay: 0
+    name: Thermosphere Wave
+    actions:
+    - name: 1 tunnel normal
+      actionDelay: 0.1
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 953297b974b483042a5da8639be0b399, type: 2}
+      spawnCount: 5
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: boost
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 8857f6c46c21419469f7ac209eb0538b, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 1.5
+        y: 1.79
+        randomOffsetFactor: 0
+    - name: 1 tunnel rotational
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 986b0af3336e4eb4b82262f68536ab89, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.5
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: 1 tunnel random rotatinal
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 986b0af3336e4eb4b82262f68536ab89, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.5
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 3
+    - name: 1 tunnel dhor
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 286e0316de5041a4b94dc2a58bd59bfd, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: boost
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 8857f6c46c21419469f7ac209eb0538b, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 1.56
+        randomOffsetFactor: 0
+    - name: health
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 653fb789002088546927b8d52849d7f5, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: -1.5
+        randomOffsetFactor: 0
+    - name: 1 tunnel dhor
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 286e0316de5041a4b94dc2a58bd59bfd, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: 1 tunnel dhor rotate
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: f15024bafe4a8f8498ddc3fe31582560, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: 1 tunnel dver only
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: d120b8e946e3e0943b9c5c2d3a61c861, type: 2}
+      spawnCount: 3
+      spawnDelay: 0.8
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: boost
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 8857f6c46c21419469f7ac209eb0538b, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -2
+        y: 2
+        randomOffsetFactor: 0
+    - name: 1 tunnel dver only
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: d120b8e946e3e0943b9c5c2d3a61c861, type: 2}
+      spawnCount: 2
+      spawnDelay: 0.8
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: health
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 653fb789002088546927b8d52849d7f5, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 2.5
+        y: -1.91
+        randomOffsetFactor: 0
+    - name: 1 tunnel dver
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: d120b8e946e3e0943b9c5c2d3a61c861, type: 2}
+      spawnCount: 4
+      spawnDelay: 0.8
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: boost
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 8857f6c46c21419469f7ac209eb0538b, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -2
+        y: 0
+        randomOffsetFactor: 0
+    - name: 1 tunnel dver short
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 223aedd2f0342924481aeb5be00422f2, type: 2}
+      spawnCount: 1
+      spawnDelay: 0.8
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: health
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 653fb789002088546927b8d52849d7f5, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 2
+        y: 0
+        randomOffsetFactor: 0
+    - name: 1 tunnel dver short
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 223aedd2f0342924481aeb5be00422f2, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: 1 tunnel rotational
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 986b0af3336e4eb4b82262f68536ab89, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.5
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: 1 tunnel static random
+      actionDelay: 2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 953297b974b483042a5da8639be0b399, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.3
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 3
+    - name: 1 tunnel rotational random
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 986b0af3336e4eb4b82262f68536ab89, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.3
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 3
+    finalBoss: {fileID: 0}

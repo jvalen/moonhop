@@ -1,0 +1,582 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e687e0baf211043b53837ff38a3a13, type: 3}
+  m_Name: WaveDefinition 03
+  m_EditorClassIdentifier: 
+  wave:
+    startWaveDelay: 3
+    shareActionDelay: 0
+    name: Mesosphere Wave
+    actions:
+    - name: 4 meteors
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: fa391f1b14f762c46ba3c3ef7f643ec3, type: 2}
+      spawnCount: 4
+      spawnDelay: 0.5
+      message: 
+      enabled: 1
+      burst: 0.1
+      objectPositionList:
+      - x: -3
+        y: 2
+        randomOffsetFactor: 3
+      - x: -3
+        y: -2
+        randomOffsetFactor: 3
+      - x: 3
+        y: 2
+        randomOffsetFactor: 3
+      - x: 3
+        y: -2
+        randomOffsetFactor: 3
+    - name: 08 diagonal 01
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: aec9e25d159e1034f969e58a18a73fd6, type: 2}
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      - {fileID: 11400000, guid: 862a8b07b946e5a45961ee8fbec63c52, type: 2}
+      - {fileID: 11400000, guid: 529b25de0fb0c63439b2ddd28ed965ac, type: 2}
+      - {fileID: 11400000, guid: 8c6f268dd76263e49ae91d4e83ce0a3a, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -4
+        y: 2.5
+        randomOffsetFactor: 0
+      - x: -2.72
+        y: 2
+        randomOffsetFactor: 0
+      - x: -1.56
+        y: 1.5
+        randomOffsetFactor: 0
+      - x: -0.23
+        y: 1
+        randomOffsetFactor: 0
+      - x: 1.13
+        y: 0
+        randomOffsetFactor: 0
+      - x: 2.1
+        y: -0.5
+        randomOffsetFactor: 0
+      - x: 3.16
+        y: -1
+        randomOffsetFactor: 0
+      - x: 4
+        y: -1.5
+        randomOffsetFactor: 0
+    - name: 1 tunnel normal
+      actionDelay: 0.1
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 953297b974b483042a5da8639be0b399, type: 2}
+      spawnCount: 1
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: boost bottom left
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 8857f6c46c21419469f7ac209eb0538b, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -2
+        y: -2
+        randomOffsetFactor: 0
+    - name: 08 diagonal 01
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: aec9e25d159e1034f969e58a18a73fd6, type: 2}
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      - {fileID: 11400000, guid: 862a8b07b946e5a45961ee8fbec63c52, type: 2}
+      - {fileID: 11400000, guid: 529b25de0fb0c63439b2ddd28ed965ac, type: 2}
+      - {fileID: 11400000, guid: 8c6f268dd76263e49ae91d4e83ce0a3a, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -4
+        y: 1.5
+        randomOffsetFactor: 0
+      - x: -2.72
+        y: 1
+        randomOffsetFactor: 0
+      - x: -1.56
+        y: 0.5
+        randomOffsetFactor: 0
+      - x: -0.23
+        y: -0.5
+        randomOffsetFactor: 0
+      - x: 1.13
+        y: -1.5
+        randomOffsetFactor: 0
+      - x: 2.1
+        y: -2.5
+        randomOffsetFactor: 0
+      - x: 3.16
+        y: -3
+        randomOffsetFactor: 0
+      - x: 4
+        y: -3
+        randomOffsetFactor: 0
+    - name: boost bottom right
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 8857f6c46c21419469f7ac209eb0538b, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 2
+        y: 2
+        randomOffsetFactor: 0
+    - name: 01 large center
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: efab37b3103506b40a759b6acaa141dd, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: -0
+        randomOffsetFactor: 0
+    - name: 1 tunnel rotational
+      actionDelay: 0.1
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 986b0af3336e4eb4b82262f68536ab89, type: 2}
+      spawnCount: 1
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: 10 big assortment
+      actionDelay: 1
+      objectDefinitionList:
+      - {fileID: 11400000, guid: aec9e25d159e1034f969e58a18a73fd6, type: 2}
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      - {fileID: 11400000, guid: 862a8b07b946e5a45961ee8fbec63c52, type: 2}
+      - {fileID: 11400000, guid: 529b25de0fb0c63439b2ddd28ed965ac, type: 2}
+      - {fileID: 11400000, guid: 8c6f268dd76263e49ae91d4e83ce0a3a, type: 2}
+      spawnCount: 4
+      spawnDelay: 0.5
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -3.78
+        y: 2.84
+        randomOffsetFactor: 1
+      - x: 3.79
+        y: 0.61
+        randomOffsetFactor: 1
+      - x: 2.64
+        y: -2.85
+        randomOffsetFactor: 1
+      - x: -1.18
+        y: -2.83
+        randomOffsetFactor: 1
+      - x: 0.3
+        y: -1.31
+        randomOffsetFactor: 1
+      - x: 3.66
+        y: -0.84
+        randomOffsetFactor: 1
+      - x: 1.39
+        y: -2.64
+        randomOffsetFactor: 1
+      - x: -0.98
+        y: -0.95
+        randomOffsetFactor: 0.3
+      - x: 1.7
+        y: 0.83
+        randomOffsetFactor: 0.3
+      - x: 3.51
+        y: 1.71
+        randomOffsetFactor: 0.3
+    - name: Wheel rotational
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 58ced8316ed7eda43ae9bb12ec9b8628, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: health
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 653fb789002088546927b8d52849d7f5, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 2.44
+        y: -1.36
+        randomOffsetFactor: 0
+    - name: Fill borders random
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: aec9e25d159e1034f969e58a18a73fd6, type: 2}
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      - {fileID: 11400000, guid: 862a8b07b946e5a45961ee8fbec63c52, type: 2}
+      - {fileID: 11400000, guid: 3982504864291834485afa1ebddcb0c9, type: 2}
+      - {fileID: 11400000, guid: 529b25de0fb0c63439b2ddd28ed965ac, type: 2}
+      - {fileID: 11400000, guid: 8c6f268dd76263e49ae91d4e83ce0a3a, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -3.5
+        y: 2
+        randomOffsetFactor: 0.2
+      - x: -3.5
+        y: -2.5
+        randomOffsetFactor: 0.2
+      - x: -2.5
+        y: 2
+        randomOffsetFactor: 0.2
+      - x: -2.5
+        y: -2.5
+        randomOffsetFactor: 0.2
+      - x: -1.5
+        y: 2
+        randomOffsetFactor: 0.2
+      - x: -1.5
+        y: -2.5
+        randomOffsetFactor: 0.2
+      - x: -0.5
+        y: 2
+        randomOffsetFactor: 0.2
+      - x: -0.5
+        y: -2.5
+        randomOffsetFactor: 0.2
+      - x: 0.5
+        y: 2
+        randomOffsetFactor: 0.2
+      - x: 0.5
+        y: -2.5
+        randomOffsetFactor: 0.2
+      - x: 1.5
+        y: 2
+        randomOffsetFactor: 0.2
+      - x: 1.5
+        y: -2.5
+        randomOffsetFactor: 0.2
+      - x: 2.5
+        y: 2
+        randomOffsetFactor: 0.2
+      - x: 2.5
+        y: -2.5
+        randomOffsetFactor: 0.2
+      - x: 3.5
+        y: 2
+        randomOffsetFactor: 0.2
+      - x: 3.5
+        y: -2.5
+        randomOffsetFactor: 0.2
+      - x: -3.5
+        y: 1
+        randomOffsetFactor: 0.2
+      - x: 3.5
+        y: 1
+        randomOffsetFactor: 0.2
+      - x: -3.5
+        y: 0
+        randomOffsetFactor: 0.2
+      - x: 3.5
+        y: 0
+        randomOffsetFactor: 0.2
+      - x: -3.5
+        y: -1
+        randomOffsetFactor: 0.2
+      - x: 3.5
+        y: -1
+        randomOffsetFactor: 0.2
+    - name: 10 big assortment
+      actionDelay: 1
+      objectDefinitionList:
+      - {fileID: 11400000, guid: aec9e25d159e1034f969e58a18a73fd6, type: 2}
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      - {fileID: 11400000, guid: 862a8b07b946e5a45961ee8fbec63c52, type: 2}
+      - {fileID: 11400000, guid: 529b25de0fb0c63439b2ddd28ed965ac, type: 2}
+      - {fileID: 11400000, guid: 8c6f268dd76263e49ae91d4e83ce0a3a, type: 2}
+      spawnCount: 6
+      spawnDelay: 0.5
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -0.11
+        y: 2.84
+        randomOffsetFactor: 1
+      - x: 3.79
+        y: 0.61
+        randomOffsetFactor: 1
+      - x: 2.64
+        y: -2.85
+        randomOffsetFactor: 1
+      - x: -1.18
+        y: -2.83
+        randomOffsetFactor: 1
+      - x: 0.3
+        y: -1.31
+        randomOffsetFactor: 1
+      - x: 3.66
+        y: -0.84
+        randomOffsetFactor: 1
+      - x: 1.39
+        y: -2.64
+        randomOffsetFactor: 1
+      - x: -0.98
+        y: -0.95
+        randomOffsetFactor: 0.3
+      - x: 1.7
+        y: 0.83
+        randomOffsetFactor: 0.3
+      - x: 3.51
+        y: 1.71
+        randomOffsetFactor: 0.3
+    - name: 1 tunnel rotational
+      actionDelay: 0.1
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 986b0af3336e4eb4b82262f68536ab89, type: 2}
+      spawnCount: 1
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: boost
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 8857f6c46c21419469f7ac209eb0538b, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 2
+        y: 0
+        randomOffsetFactor: 0
+    - name: 01 large center
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: efab37b3103506b40a759b6acaa141dd, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: -0
+        randomOffsetFactor: 0
+    - name: 1 tunnel rotational
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 986b0af3336e4eb4b82262f68536ab89, type: 2}
+      spawnCount: 1
+      spawnDelay: 0.5
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: 10 big assortment wide
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: aec9e25d159e1034f969e58a18a73fd6, type: 2}
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      - {fileID: 11400000, guid: 862a8b07b946e5a45961ee8fbec63c52, type: 2}
+      - {fileID: 11400000, guid: 529b25de0fb0c63439b2ddd28ed965ac, type: 2}
+      - {fileID: 11400000, guid: 8c6f268dd76263e49ae91d4e83ce0a3a, type: 2}
+      spawnCount: 3
+      spawnDelay: 0.4
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -3.62
+        y: 2.61
+        randomOffsetFactor: 1
+      - x: -3.32
+        y: -2.87
+        randomOffsetFactor: 1
+      - x: -2.32
+        y: 2.09
+        randomOffsetFactor: 1
+      - x: -2.83
+        y: -2.26
+        randomOffsetFactor: 1
+      - x: -0.87
+        y: 1.65
+        randomOffsetFactor: 1
+      - x: -0.52
+        y: -1.9
+        randomOffsetFactor: 1
+      - x: 0.85
+        y: 1.36
+        randomOffsetFactor: 1
+      - x: 0.76
+        y: -1.88
+        randomOffsetFactor: 1
+      - x: 2.79
+        y: 1.77
+        randomOffsetFactor: 1
+      - x: 3.13
+        y: -2.31
+        randomOffsetFactor: 1
+      - x: 3.95
+        y: 2.57
+        randomOffsetFactor: 1
+      - x: 3.76
+        y: -2.76
+        randomOffsetFactor: 1
+    - name: health
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 653fb789002088546927b8d52849d7f5, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -3.2
+        y: -2.5
+        randomOffsetFactor: 0
+    - name: 10 big assortment wide
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: aec9e25d159e1034f969e58a18a73fd6, type: 2}
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      - {fileID: 11400000, guid: 862a8b07b946e5a45961ee8fbec63c52, type: 2}
+      - {fileID: 11400000, guid: 529b25de0fb0c63439b2ddd28ed965ac, type: 2}
+      - {fileID: 11400000, guid: 8c6f268dd76263e49ae91d4e83ce0a3a, type: 2}
+      spawnCount: 3
+      spawnDelay: 0.4
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -3.62
+        y: 2.61
+        randomOffsetFactor: 1
+      - x: -3.32
+        y: -2.87
+        randomOffsetFactor: 1
+      - x: -2.32
+        y: 2.09
+        randomOffsetFactor: 1
+      - x: -2.83
+        y: -2.26
+        randomOffsetFactor: 1
+      - x: -0.87
+        y: 1.65
+        randomOffsetFactor: 1
+      - x: -0.52
+        y: -1.9
+        randomOffsetFactor: 1
+      - x: 0.85
+        y: 1.36
+        randomOffsetFactor: 1
+      - x: 0.76
+        y: -1.88
+        randomOffsetFactor: 1
+      - x: 2.79
+        y: 1.77
+        randomOffsetFactor: 1
+      - x: 3.13
+        y: -2.31
+        randomOffsetFactor: 1
+      - x: 3.95
+        y: 2.57
+        randomOffsetFactor: 1
+      - x: 3.76
+        y: -2.76
+        randomOffsetFactor: 1
+    - name: Wheel rotational
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 58ced8316ed7eda43ae9bb12ec9b8628, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: health
+      actionDelay: 0.9
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 653fb789002088546927b8d52849d7f5, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 3
+        y: 1.6
+        randomOffsetFactor: 0
+    - name: Wheel rotational
+      actionDelay: 0.8
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 58ced8316ed7eda43ae9bb12ec9b8628, type: 2}
+      spawnCount: 3
+      spawnDelay: 1.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    finalBoss: {fileID: 0}

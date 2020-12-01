@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec56aff00863d704d906415b4b064d83, type: 3}
+  m_Name: Boost Item
+  m_EditorClassIdentifier: 
+  displayName: Boost Item
+  description: Make the player move fast for determined time
+  floatingObjectPrefab: {fileID: 344651997526801512, guid: c98a454caf471c8439e8a1fc17422ed8, type: 3}
+  effectParticleSystem: {fileID: 0}
+  effectValue: 2
+  isRotational: 0
+  rotateOnlyX: 0
+  rotateOnlyY: 0
+  rotateOnlyZ: 0
+  isChild: 0
+  zBoundaryPosition: 0
+  rotationSpeed: 50
+  rotationRandomFactor: 30
+  oscilatorFactorX: 0
+  oscilatorSpeedX: 0
+  oscilatorFactorY: 0
+  oscilatorSpeedY: 0
+  homingSpeed: 0

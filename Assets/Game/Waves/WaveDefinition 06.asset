@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e687e0baf211043b53837ff38a3a13, type: 3}
+  m_Name: WaveDefinition 06
+  m_EditorClassIdentifier: 
+  wave:
+    startWaveDelay: 0
+    shareActionDelay: 0
+    name: Space Wave
+    actions:
+    - name: Final boss
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 799a726765616d947923e8b24f81df14, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    finalBoss: {fileID: 839306245307199083, guid: 9c77a4f0e017f7b4b9c252c0e76c2d61, type: 3}

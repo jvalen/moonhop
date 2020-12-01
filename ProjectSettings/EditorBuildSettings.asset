@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Story.unity
+    guid: f81597d03b650a94ba08f8e97df61614
+  - enabled: 1
+    path: Assets/Scenes/Title Screen.unity
+    guid: c5e62e4b1416b5d4aa333236f849585b
+  - enabled: 1
+    path: Assets/Scenes/Level.unity
+    guid: ed658b5d2abf17340b39b799d3dab665
+  - enabled: 1
+    path: Assets/Scenes/ApproachToMoon.unity
+    guid: d29e8f7b7ee1db24987157103567118f
+  - enabled: 1
+    path: Assets/Scenes/End Screen.unity
+    guid: 95793f82810e20c448fc8fc80e5667e5
+  m_configObjects: {}

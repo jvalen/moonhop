@@ -1,0 +1,447 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e687e0baf211043b53837ff38a3a13, type: 3}
+  m_Name: WaveDefinition 05
+  m_EditorClassIdentifier: 
+  wave:
+    startWaveDelay: 1
+    shareActionDelay: 0
+    name: Exosphere Wave
+    actions:
+    - name: 08 burst 7 spawn
+      actionDelay: 1
+      objectDefinitionList:
+      - {fileID: 11400000, guid: aec9e25d159e1034f969e58a18a73fd6, type: 2}
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      - {fileID: 11400000, guid: 862a8b07b946e5a45961ee8fbec63c52, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.5
+      message: 
+      enabled: 1
+      burst: 0.05
+      objectPositionList:
+      - x: -2.94
+        y: 1.97
+        randomOffsetFactor: 1.5
+      - x: 3
+        y: 1.48
+        randomOffsetFactor: 1.5
+      - x: -0.61
+        y: -1.37
+        randomOffsetFactor: 1.5
+      - x: -2.89
+        y: 0.42
+        randomOffsetFactor: 1.5
+      - x: 3.08
+        y: -1.97
+        randomOffsetFactor: 1.5
+      - x: -0.43
+        y: 1.96
+        randomOffsetFactor: 1.5
+      - x: 1.02
+        y: -1.47
+        randomOffsetFactor: 1.5
+    - name: 1 tunnel rotational
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 986b0af3336e4eb4b82262f68536ab89, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: 01 large center
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: efab37b3103506b40a759b6acaa141dd, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: -0
+        randomOffsetFactor: 0
+    - name: health
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 653fb789002088546927b8d52849d7f5, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 2
+        y: 1.5
+        randomOffsetFactor: 0        
+    - name: 08-circles left right
+      actionDelay: 1
+      objectDefinitionList:
+      - {fileID: 11400000, guid: aec9e25d159e1034f969e58a18a73fd6, type: 2}
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      - {fileID: 11400000, guid: 862a8b07b946e5a45961ee8fbec63c52, type: 2}
+      spawnCount: 2
+      spawnDelay: 1
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -2
+        y: 3
+        randomOffsetFactor: 0
+      - x: -3
+        y: 1.5
+        randomOffsetFactor: 0
+      - x: -4
+        y: 0
+        randomOffsetFactor: 0
+      - x: -1
+        y: 1.5
+        randomOffsetFactor: 0
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+      - x: -3
+        y: -1.5
+        randomOffsetFactor: 0
+      - x: -1
+        y: -1.5
+        randomOffsetFactor: 0
+      - x: -2
+        y: -3
+        randomOffsetFactor: 0
+      - x: 2
+        y: 3
+        randomOffsetFactor: 0
+      - x: 1
+        y: 1.5
+        randomOffsetFactor: 0
+      - x: 3
+        y: 1.5
+        randomOffsetFactor: 0
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+      - x: 4
+        y: 0
+        randomOffsetFactor: 0
+      - x: 1
+        y: -1.5
+        randomOffsetFactor: 0
+      - x: 3
+        y: -1.5
+        randomOffsetFactor: 0
+      - x: 2
+        y: -3
+        randomOffsetFactor: 0
+    - name: 08 column middle
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      spawnCount: 8
+      spawnDelay: 0.1
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 3
+        randomOffsetFactor: 0
+      - x: 0
+        y: 2
+        randomOffsetFactor: 0
+      - x: 0
+        y: 1
+        randomOffsetFactor: 0
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+      - x: 0
+        y: -1
+        randomOffsetFactor: 0
+      - x: 0
+        y: -2
+        randomOffsetFactor: 0
+      - x: 0
+        y: -3
+        randomOffsetFactor: 0
+    - name: health
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 653fb789002088546927b8d52849d7f5, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -2.44
+        y: 0
+        randomOffsetFactor: 0
+    - name: 08 column middle
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      spawnCount: 8
+      spawnDelay: 0.1
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 3
+        randomOffsetFactor: 0
+      - x: 0
+        y: 2
+        randomOffsetFactor: 0
+      - x: 0
+        y: 1
+        randomOffsetFactor: 0
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+      - x: 0
+        y: -1
+        randomOffsetFactor: 0
+      - x: 0
+        y: -2
+        randomOffsetFactor: 0
+      - x: 0
+        y: -3
+        randomOffsetFactor: 0
+    - name: 01 large center
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: efab37b3103506b40a759b6acaa141dd, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: -0
+        randomOffsetFactor: 0
+    - name: boost right
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 8857f6c46c21419469f7ac209eb0538b, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 2.44
+        y: 0
+        randomOffsetFactor: 0
+    - name: 08 column middle
+      actionDelay: 0
+      objectDefinitionList:
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      spawnCount: 8
+      spawnDelay: 0.1
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 3
+        randomOffsetFactor: 0
+      - x: 0
+        y: 2
+        randomOffsetFactor: 0
+      - x: 0
+        y: 1
+        randomOffsetFactor: 0
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+      - x: 0
+        y: -1
+        randomOffsetFactor: 0
+      - x: 0
+        y: -2
+        randomOffsetFactor: 0
+      - x: 0
+        y: -3
+        randomOffsetFactor: 0
+    - name: 4 meteors
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: fa391f1b14f762c46ba3c3ef7f643ec3, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0.1
+      objectPositionList:
+      - x: -3
+        y: 2
+        randomOffsetFactor: 1
+      - x: -3
+        y: -2
+        randomOffsetFactor: 1
+      - x: 3
+        y: 2
+        randomOffsetFactor: 1
+      - x: 3
+        y: -2
+        randomOffsetFactor: 1
+    - name: 01 large center
+      actionDelay: 0.5
+      objectDefinitionList:
+      - {fileID: 11400000, guid: efab37b3103506b40a759b6acaa141dd, type: 2}
+      spawnCount: 6
+      spawnDelay: 0.5
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: -0
+        randomOffsetFactor: 0
+    - name: 08 diagonal 01
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: aec9e25d159e1034f969e58a18a73fd6, type: 2}
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      - {fileID: 11400000, guid: 862a8b07b946e5a45961ee8fbec63c52, type: 2}
+      - {fileID: 11400000, guid: 529b25de0fb0c63439b2ddd28ed965ac, type: 2}
+      - {fileID: 11400000, guid: 8c6f268dd76263e49ae91d4e83ce0a3a, type: 2}
+      spawnCount: 3
+      spawnDelay: 0.3
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -4
+        y: 2.5
+        randomOffsetFactor: 0
+      - x: -2.72
+        y: 2
+        randomOffsetFactor: 0
+      - x: -1.56
+        y: 1.5
+        randomOffsetFactor: 0
+      - x: -0.23
+        y: 1
+        randomOffsetFactor: 0
+      - x: 1.13
+        y: 0
+        randomOffsetFactor: 0
+      - x: 2.1
+        y: -0.5
+        randomOffsetFactor: 0
+      - x: 3.16
+        y: -1
+        randomOffsetFactor: 0
+      - x: 4
+        y: -1.5
+        randomOffsetFactor: 0
+    - name: 1 tunnel static random
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 953297b974b483042a5da8639be0b399, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.3
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 3
+    - name: 08 diagonal 01
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: aec9e25d159e1034f969e58a18a73fd6, type: 2}
+      - {fileID: 11400000, guid: cdf262e9d88332744baffe7ce0889963, type: 2}
+      - {fileID: 11400000, guid: 862a8b07b946e5a45961ee8fbec63c52, type: 2}
+      - {fileID: 11400000, guid: 529b25de0fb0c63439b2ddd28ed965ac, type: 2}
+      - {fileID: 11400000, guid: 8c6f268dd76263e49ae91d4e83ce0a3a, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -4
+        y: 2.5
+        randomOffsetFactor: 0
+      - x: -2.72
+        y: 2
+        randomOffsetFactor: 0
+      - x: -1.56
+        y: 1.5
+        randomOffsetFactor: 0
+      - x: -0.23
+        y: 1
+        randomOffsetFactor: 0
+      - x: 1.13
+        y: 0
+        randomOffsetFactor: 0
+      - x: 2.1
+        y: -0.5
+        randomOffsetFactor: 0
+      - x: 3.16
+        y: -1
+        randomOffsetFactor: 0
+      - x: 4
+        y: -1.5
+        randomOffsetFactor: 0
+    - name: health
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 653fb789002088546927b8d52849d7f5, type: 2}
+      spawnCount: 1
+      spawnDelay: 0
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: -1.5
+        y: -1.5
+        randomOffsetFactor: 0
+    - name: 1 tunnel dver short
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: 223aedd2f0342924481aeb5be00422f2, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    - name: 1 tunnel dver short
+      actionDelay: 0.2
+      objectDefinitionList:
+      - {fileID: 11400000, guid: f15024bafe4a8f8498ddc3fe31582560, type: 2}
+      spawnCount: 10
+      spawnDelay: 0.2
+      message: 
+      enabled: 1
+      burst: 0
+      objectPositionList:
+      - x: 0
+        y: 0
+        randomOffsetFactor: 0
+    finalBoss: {fileID: 0}
