@@ -56,7 +56,7 @@ namespace MoonHop.UI
 
         public void GotoCredits()
         {
-            Application.OpenURL("https://github.com/jvalen");
+            Application.OpenURL("https://github.com/jvalen/moonhop");
         }
 
         public void QuitGame()
