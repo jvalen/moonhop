@@ -38,6 +38,8 @@ namespace MoonHop.Core
         [SerializeField] float minSpeedFactor = 1.5f;
         [SerializeField] float maxSpeedFactor = 5f;
 
+        Vector3 closestMoonDistance = new Vector3(0, 0, 40);
+
         Health health = null;
         PickupItem pickup = null;
         float fallingTime = 3f;
@@ -166,12 +168,18 @@ namespace MoonHop.Core
 
         private void UpdateMoonPosition()
         {
-            if (currentLayerIndex + 1 == GetAtmosphereLayerCount()) return;
-            moon.transform.position = new Vector3(
-                0,
-                0,
-                GetMoonDistance() * atmosphereLayers[currentLayerIndex].moonSpeedFactor
-            );
+            if (currentLayerIndex + 1 == GetAtmosphereLayerCount())
+            {
+                moon.transform.position = closestMoonDistance;
+            }
+            else
+            {
+                moon.transform.position = new Vector3(
+                    0,
+                    0,
+                    GetMoonDistance() * atmosphereLayers[currentLayerIndex].moonSpeedFactor
+                );
+            }
         }
 
         public float GetSpeedFactor()

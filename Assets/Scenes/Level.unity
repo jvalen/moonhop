@@ -1900,7 +1900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2044212135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1908,11 +1908,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044212134}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc117228a17d7a54aab89e125a73890e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showFPS: 0
+  force60FPS: 1
 --- !u!4 &2044212136
 Transform:
   m_ObjectHideFlags: 0
@@ -3358,6 +3360,14 @@ PrefabInstance:
       propertyPath: moon
       value: 
       objectReference: {fileID: 787108438}
+    - target: {fileID: 5500027573515179342, guid: 6ab05b7e75ebfc14fbbae5875ba1e85b, type: 3}
+      propertyPath: distanceTravelled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5500027573515179342, guid: 6ab05b7e75ebfc14fbbae5875ba1e85b, type: 3}
+      propertyPath: atmosphereLayers.Array.data[4].moonSpeedFactor
+      value: 0.0002
+      objectReference: {fileID: 0}
     - target: {fileID: 5842543791601560584, guid: 6ab05b7e75ebfc14fbbae5875ba1e85b, type: 3}
       propertyPath: m_Controller
       value: 

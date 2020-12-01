@@ -5,18 +5,26 @@ public class FPSDisplay : MonoBehaviour
 {
     float deltaTime = 0.0f;
 
+    [SerializeField] bool showFPS = false;
+    [SerializeField] bool force60FPS = false;
+
     private void Awake()
     {
-        Application.targetFrameRate = 60;
+        if (force60FPS)
+        {
+            Application.targetFrameRate = 60;
+        }
     }
 
     void Update()
     {
+        if (!showFPS) return;
         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
     }
 
     void OnGUI()
     {
+        if (!showFPS) return;
         int w = Screen.width, h = Screen.height;
 
         GUIStyle style = new GUIStyle();
