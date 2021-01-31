@@ -16,6 +16,14 @@ namespace MoonHop.Effects
         Health health = null;
         Coroutine shakeCoroutine = null;
 
+        public void ShakeObject()
+        {
+            if (shakeCoroutine == null)
+            {
+                shakeCoroutine = StartCoroutine(ShakeByDamageTaken());
+            }
+        }
+
         private void Awake()
         {
             health = GameObject.FindWithTag("Player").GetComponent<Health>();
@@ -29,14 +37,6 @@ namespace MoonHop.Effects
             if (autoShake)
             {
                 shakeDuration = Mathf.Infinity;
-                shakeCoroutine = StartCoroutine(ShakeByDamageTaken());
-            }
-        }
-
-        public void ShakeObject()
-        {
-            if (shakeCoroutine == null)
-            {
                 shakeCoroutine = StartCoroutine(ShakeByDamageTaken());
             }
         }

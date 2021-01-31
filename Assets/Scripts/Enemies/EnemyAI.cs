@@ -20,19 +20,18 @@ namespace MoonHop.Enemies
         [SerializeField] float bossSpeed = 4f;
         [SerializeField] float bossMovementRadio = 7f;
 
+        protected Health target = null;
+
+        JourneyPhysics journey;
+        Coroutine coroutine = null;
+        Vector2 newBossPosition = new Vector3();
         int objectToThrowIndex = 0;
         float currentShootFrequency = 0.3f;
         bool keepThrowing = true;
         bool isDead = false;
-        Coroutine coroutine = null;
-
         float elapsedTime = 0;
         int stateChangeCounter = 1;
         float totalMoveDuration = 1f;
-        Vector2 newBossPosition = new Vector3();
-
-        protected Health target = null;
-        JourneyPhysics journey;
 
         private void Awake()
         {

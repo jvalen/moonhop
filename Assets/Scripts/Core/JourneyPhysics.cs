@@ -21,36 +21,13 @@ namespace MoonHop.Core
         }
 
         [SerializeField] List<AtmosphereLayer> atmosphereLayers;
-        AtmosphereLayer currentLayer = new AtmosphereLayer();
-
-        int currentLayerIndex = 0;
-
         [SerializeField] GameObject moon = null;
         [SerializeField] float moonApproachFactor = 0.001f;
         [SerializeField] float distanceTravelled = 0;
         [SerializeField] float distanceToMoon = 384000f;
-        float lastMoonDistance = 0f;
-        float speedFormatted = 0f;
-        float elapsedTimeSpeedCounter = 0f;
-        float totalElapsedTime = 0f;
-
         [SerializeField] float speedFactor = 1.5f;
         [SerializeField] float minSpeedFactor = 1.5f;
         [SerializeField] float maxSpeedFactor = 5f;
-
-        Vector3 closestMoonDistance = new Vector3(0, 0, 40);
-
-        Health health = null;
-        PickupItem pickup = null;
-        float fallingTime = 3f;
-        float fallingSpeed = 0.01f;
-        bool isDead = false;
-        float endJourneyDelay = 6f;
-        bool isEndJourney = false;
-
-        Coroutine currentCoroutine = null;
-        ElapsedTime ElapsedTimePersistentObject = null;
-        Score ScorePersistentObject = null;
 
         public delegate void AtmosphereLayerChangeDelegate(int layerId);
         public event AtmosphereLayerChangeDelegate onAtmosphereLayerChange;
@@ -59,6 +36,115 @@ namespace MoonHop.Core
         public event TimeCounterChangeDelegate onTimeCounterChange;
 
         public event Action onEndJourney;
+
+        AtmosphereLayer currentLayer = new AtmosphereLayer();
+        Vector3 closestMoonDistance = new Vector3(0, 0, 40);
+        Health health = null;
+        PickupItem pickup = null;
+        Coroutine currentCoroutine = null;
+        ElapsedTime ElapsedTimePersistentObject = null;
+        Score ScorePersistentObject = null;
+        int currentLayerIndex = 0;
+        float lastMoonDistance = 0f;
+        float speedFormatted = 0f;
+        float elapsedTimeSpeedCounter = 0f;
+        float totalElapsedTime = 0f;
+        float fallingTime = 3f;
+        float fallingSpeed = 0.01f;
+        bool isDead = false;
+        float endJourneyDelay = 6f;
+        bool isEndJourney = false;
+
+        public void Boost(float boostTime)
+        {
+            if (currentCoroutine == null)
+            {
+                currentCoroutine = StartCoroutine(SpeedUpAndSlowDown(boostTime));
+            }
+        }
+
+        public void StoppedByHit()
+        {
+            speedFactor = GetDefaultSpeedFactorLayer();
+            if (currentCoroutine != null)
+            {
+                StopCoroutine(currentCoroutine);
+                currentCoroutine = null;
+            }
+        }
+
+        public void Falling()
+        {
+            isDead = true;
+            ElapsedTimePersistentObject.SetElapsedTime(-1);
+            StartCoroutine(ReverseSpeed());
+        }
+
+        public float GetMoonSpeed()
+        {
+            return GetSpeedFactor() * moonApproachFactor;
+        }
+
+        public float GetMoonDistance()
+        {
+            return distanceToMoon - distanceTravelled; ;
+        }
+
+        public float GetDistanceTravelled()
+        {
+            return distanceTravelled;
+        }
+
+        public float GetAtmosphereLayerCount()
+        {
+            return atmosphereLayers.Count;
+        }
+
+        public float GetSpeedFactor()
+        {
+            return speedFactor;
+        }
+
+        public float GetDefaultSpeedFactorLayer()
+        {
+            return atmosphereLayers[currentLayerIndex].speedFactorLayer;
+        }
+
+        public void SetSpeedFactor(float newFactor)
+        {
+            speedFactor = newFactor;
+        }
+
+        public float GetMinSpeedFactor()
+        {
+            return minSpeedFactor;
+        }
+
+        public float GetMaxSpeedFactor()
+        {
+            return maxSpeedFactor;
+        }
+
+        public float GetSpeedFormatted()
+        {
+            return speedFormatted;
+        }
+
+        public void calculateSpeedFormatted(float currentDistance)
+        {
+            elapsedTimeSpeedCounter += Time.deltaTime;
+            if (elapsedTimeSpeedCounter >= 1f)
+            {
+                speedFormatted = (currentDistance - lastMoonDistance) * 3600;
+                elapsedTimeSpeedCounter = elapsedTimeSpeedCounter % 1f;
+                lastMoonDistance = currentDistance;
+            }
+        }
+
+        public string GetAtmosphereLayerName()
+        {
+            return atmosphereLayers[currentLayerIndex].name;
+        }
 
         private void Awake()
         {
@@ -82,13 +168,6 @@ namespace MoonHop.Core
             onAtmosphereLayerChange(currentLayerIndex);
         }
 
-        public void Boost(float boostTime)
-        {
-            if (currentCoroutine == null)
-            {
-                currentCoroutine = StartCoroutine(SpeedUpAndSlowDown(boostTime));
-            }
-        }
 
         private IEnumerator SpeedUpAndSlowDown(float boostTime)
         {
@@ -96,23 +175,6 @@ namespace MoonHop.Core
             yield return new WaitForSeconds(boostTime);
             speedFactor = GetDefaultSpeedFactorLayer();
             currentCoroutine = null;
-        }
-
-        public void StoppedByHit()
-        {
-            speedFactor = GetDefaultSpeedFactorLayer();
-            if (currentCoroutine != null)
-            {
-                StopCoroutine(currentCoroutine);
-                currentCoroutine = null;
-            }
-        }
-
-        public void Falling()
-        {
-            isDead = true;
-            ElapsedTimePersistentObject.SetElapsedTime(-1);
-            StartCoroutine(ReverseSpeed());
         }
 
         private IEnumerator ReverseSpeed()
@@ -146,25 +208,7 @@ namespace MoonHop.Core
             onTimeCounterChange(GetElapsedTimeFormatted(totalElapsedTime));
         }
 
-        public float GetMoonSpeed()
-        {
-            return GetSpeedFactor() * moonApproachFactor;
-        }
 
-        public float GetMoonDistance()
-        {
-            return distanceToMoon - distanceTravelled; ;
-        }
-
-        public float GetDistanceTravelled()
-        {
-            return distanceTravelled;
-        }
-
-        public float GetAtmosphereLayerCount()
-        {
-            return atmosphereLayers.Count;
-        }
 
         private void UpdateMoonPosition()
         {
@@ -182,53 +226,12 @@ namespace MoonHop.Core
             }
         }
 
-        public float GetSpeedFactor()
-        {
-            return speedFactor;
-        }
-
-        public float GetDefaultSpeedFactorLayer()
-        {
-            return atmosphereLayers[currentLayerIndex].speedFactorLayer;
-        }
-
-        public void SetSpeedFactor(float newFactor)
-        {
-            speedFactor = newFactor;
-        }
-
-        public float GetMinSpeedFactor()
-        {
-            return minSpeedFactor;
-        }
-
-        public float GetMaxSpeedFactor()
-        {
-            return maxSpeedFactor;
-        }
-
         private void ProcessMoonApproach()
         {
             distanceTravelled += GetSpeedFactor() * moonApproachFactor;
             UpdateMoonPosition();
             calculateSpeedFormatted(distanceTravelled);
             UpdateAtmosphereLayerName(distanceTravelled);
-        }
-
-        public float GetSpeedFormatted()
-        {
-            return speedFormatted;
-        }
-
-        public void calculateSpeedFormatted(float currentDistance)
-        {
-            elapsedTimeSpeedCounter += Time.deltaTime;
-            if (elapsedTimeSpeedCounter >= 1f)
-            {
-                speedFormatted = (currentDistance - lastMoonDistance) * 3600;
-                elapsedTimeSpeedCounter = elapsedTimeSpeedCounter % 1f;
-                lastMoonDistance = currentDistance;
-            }
         }
 
         private int GetElapsedTimeFormatted(float elapsedTime)
@@ -275,11 +278,6 @@ namespace MoonHop.Core
         private bool IsLastLayer(int layerId)
         {
             return atmosphereLayers.Count == layerId + 1;
-        }
-
-        public string GetAtmosphereLayerName()
-        {
-            return atmosphereLayers[currentLayerIndex].name;
         }
     }
 }

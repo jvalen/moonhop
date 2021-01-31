@@ -7,9 +7,10 @@ namespace MoonHop.Stats
 {
     public class DistanceDisplay : MonoBehaviour
     {
-        JourneyPhysics journeyPhysics = null;
         [SerializeField] Image journeyImage = null;
         [SerializeField] TextMeshProUGUI distanceToMoonText = null;
+
+        JourneyPhysics journeyPhysics = null;
         float totalLayers = 0f;
 
         private void Awake()

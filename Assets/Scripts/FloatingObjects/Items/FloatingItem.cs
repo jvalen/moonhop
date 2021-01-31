@@ -6,6 +6,7 @@ namespace MoonHop.FloatingObjects.Items
     public class FloatingItem : FloatingObject
     {
         [SerializeField] public ItemTypes type;
+
         float scoreDefaultValue = 20;
 
         protected override void UpdatePosition()

@@ -9,19 +9,10 @@ namespace MoonHop.FloatingObjects.Items
     {
         [SerializeField] ParticleSystem boostParticle;
         [SerializeField] AudioSource boostSound = null;
-        Coroutine currentCoroutine = null;
 
+        Coroutine currentCoroutine = null;
         PickupItem pickupItem = null;
         Health health = null;
-
-        private void Awake()
-        {
-            pickupItem = GameObject.FindWithTag("Player").GetComponent<PickupItem>();
-            health = GameObject.FindWithTag("Player").GetComponent<Health>();
-            pickupItem.onPickupItemBoost += Boost;
-            health.onTakenDamage += DisableBoostParticleSystem;
-            health.onDead += DisableBoostParticleSystem;
-        }
 
         public void EnableBoostParticleSystem()
         {
@@ -40,6 +31,15 @@ namespace MoonHop.FloatingObjects.Items
                 boostSound.Play();
                 currentCoroutine = StartCoroutine(EnableDisableParticleSystem(boostTime));
             }
+        }
+
+        private void Awake()
+        {
+            pickupItem = GameObject.FindWithTag("Player").GetComponent<PickupItem>();
+            health = GameObject.FindWithTag("Player").GetComponent<Health>();
+            pickupItem.onPickupItemBoost += Boost;
+            health.onTakenDamage += DisableBoostParticleSystem;
+            health.onDead += DisableBoostParticleSystem;
         }
 
         private IEnumerator EnableDisableParticleSystem(float boostTime)

@@ -24,14 +24,18 @@ namespace MoonHop.Core
         [Header("Character shift roll")]
         [SerializeField] float characterRollFactor = 2f;
 
-        float xThrow, yThrow;
-
         [SerializeField] Animator playerAnimator;
         [SerializeField] Animator coreAnimator;
 
         Health health = null;
+        float xThrow, yThrow;
         float deadAnimationTime = 6f;
         int mainMenuSceneId = 1;
+
+        public void Falling()
+        {
+            StartCoroutine(LostControl());
+        }
 
         private void Awake()
         {
@@ -39,7 +43,7 @@ namespace MoonHop.Core
             health.onDead += Falling;
         }
 
-        void Update()
+        private void Update()
         {
             ProcessTranslation();
             ProcessRotation();
@@ -70,11 +74,6 @@ namespace MoonHop.Core
             float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
             transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
-        }
-
-        public void Falling()
-        {
-            StartCoroutine(LostControl());
         }
 
         private IEnumerator LostControl()

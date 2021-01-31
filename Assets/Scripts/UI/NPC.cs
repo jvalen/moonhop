@@ -18,8 +18,22 @@ namespace MoonHop.UI
         JourneyPhysics journeyPhysics = null;
         Health health = null;
         Image face = null;
-
         Coroutine talkCoroutine = null;
+
+        public void ShowNPC(int layerId)
+        {
+            talkCoroutine = StartCoroutine(NPCTalks(layerId));
+        }
+
+        public void EnableNPC()
+        {
+            face.enabled = true;
+        }
+
+        public void DisableNPC()
+        {
+            face.enabled = false;
+        }
 
         private void Awake()
         {
@@ -48,11 +62,6 @@ namespace MoonHop.UI
             EnableNPC();
         }
 
-        public void ShowNPC(int layerId)
-        {
-            talkCoroutine = StartCoroutine(NPCTalks(layerId));
-        }
-
         private IEnumerator NPCTalks(int layerId)
         {
             yield return new WaitForSeconds(1f);
@@ -72,16 +81,6 @@ namespace MoonHop.UI
         private void PlayVoice(int voiceId)
         {
             voiceClipList[voiceId].Play();
-        }
-
-        public void EnableNPC()
-        {
-            face.enabled = true;
-        }
-
-        public void DisableNPC()
-        {
-            face.enabled = false;
         }
     }
 }

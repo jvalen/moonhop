@@ -7,6 +7,7 @@ namespace MoonHop.Stats
     public class HealthDisplay : MonoBehaviour
     {
         [SerializeField] Image healthImage = null;
+
         Health health;
         int maxHealth = 0;
 

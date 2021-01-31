@@ -4,6 +4,7 @@ public class Ending : MonoBehaviour
 {
     [SerializeField] Animator playerAnimator;
     [SerializeField] AudioSource landingSound;
+
     Rigidbody rb;
 
     private void Awake()

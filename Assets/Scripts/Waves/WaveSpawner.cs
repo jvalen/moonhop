@@ -9,17 +9,16 @@ namespace MoonHop.Waves
 {
     public class WaveSpawner : MonoBehaviour
     {
-        private float delayFactor = 1f;
-        private bool keepSpawning = true;
-        public List<WaveDefinition> waves;
-        Coroutine currenCoroutineWave = null;
-        JourneyPhysics journey;
-
         [SerializeField] AudioSource mainMusic = null;
         [SerializeField] AudioSource bossMusic = null;
-        EnemyAI currentBoss = null;
-        float bossStartDelay = 4f;
+        [SerializeField] List<WaveDefinition> waves;
 
+        Coroutine currenCoroutineWave = null;
+        JourneyPhysics journey;
+        EnemyAI currentBoss = null;
+        float delayFactor = 1f;
+        bool keepSpawning = true;
+        float bossStartDelay = 4f;
 
         private void Awake()
         {
@@ -28,7 +27,7 @@ namespace MoonHop.Waves
             journey.onEndJourney += BossDefeated;
         }
 
-        IEnumerator SpawnLoop(int waveId)
+        private IEnumerator SpawnLoop(int waveId)
         {
             if (waveId >= waves.Count)
             {

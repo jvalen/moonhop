@@ -6,7 +6,7 @@ namespace MoonHop.Core
     {
         [SerializeField] GameObject targetToDestroy = null;
 
-        void Update()
+        private void Update()
         {
             if (!GetComponent<ParticleSystem>().IsAlive())
             {

@@ -8,6 +8,7 @@ namespace MoonHop.UI
     public class SkipIntro : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI blinkingText = null;
+
         float showTextDelay = 3f;
         bool isShown = false;
 

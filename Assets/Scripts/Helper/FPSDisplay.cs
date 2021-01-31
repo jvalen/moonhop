@@ -2,10 +2,10 @@
 
 public class FPSDisplay : MonoBehaviour
 {
-    float deltaTime = 0.0f;
-
     [SerializeField] bool showFPS = false;
     [SerializeField] bool force60FPS = false;
+
+    float deltaTime = 0.0f;
 
     private void Awake()
     {
@@ -15,13 +15,13 @@ public class FPSDisplay : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         if (!showFPS) return;
         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
     }
 
-    void OnGUI()
+    private void OnGUI()
     {
         if (!showFPS) return;
         int w = Screen.width, h = Screen.height;

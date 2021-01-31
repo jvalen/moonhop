@@ -25,6 +25,16 @@ namespace MoonHop.UI
             LoadScene(1);
         }
 
+        public void GotoCredits()
+        {
+            Application.OpenURL("https://github.com/jvalen/moonhop");
+        }
+
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
+
         private IEnumerator LaunchInitialLevel()
         {
             PlayStartAnimation();
@@ -51,16 +61,6 @@ namespace MoonHop.UI
         private void LoadScene(int sceneId)
         {
             SceneManager.LoadScene(sceneId);
-        }
-
-        public void GotoCredits()
-        {
-            Application.OpenURL("https://github.com/jvalen/moonhop");
-        }
-
-        public void QuitGame()
-        {
-            Application.Quit();
         }
     }
 }

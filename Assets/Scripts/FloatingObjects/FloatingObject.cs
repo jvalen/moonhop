@@ -8,24 +8,15 @@ namespace MoonHop.FloatingObjects
     public class FloatingObject : MonoBehaviour
     {
         protected FloatingObjectDefinition features = null;
-
         protected JourneyPhysics journeyPhysics = null;
         protected Health target = null;
         protected Score scorePersistentObject;
-
         protected float speedFactor = -2.4f;
         protected int effectValue = 10;
-        ParticleSystem effectParticleSystem = null;
 
+        ParticleSystem effectParticleSystem = null;
         Vector3 initialRotationVector;
         Vector3 initialPosition;
-
-        private void Awake()
-        {
-            target = GameObject.FindWithTag("Player").GetComponent<Health>();
-            journeyPhysics = GameObject.FindWithTag("GameController").GetComponent<JourneyPhysics>();
-            scorePersistentObject = GameObject.FindObjectOfType<Score>();
-        }
 
         public void Setup(FloatingObjectDefinition definition)
         {
@@ -38,61 +29,6 @@ namespace MoonHop.FloatingObjects
             {
                 transform.LookAt(GetAimLocation());
             }
-        }
-
-        private Vector3 getRotationRandomVector()
-        {
-            int xBinRandomValue = Random.Range(0, 2);
-            int yBinRandomValue = Random.Range(0, 2);
-            int zBinRandomValue = Random.Range(0, 2);
-
-            if (features.rotateOnlyX || features.rotateOnlyY || features.rotateOnlyZ)
-            {
-                return new Vector3(
-                    features.rotateOnlyX ? 1 : 0,
-                    features.rotateOnlyY ? 1 : 0,
-                    features.rotateOnlyZ ? 1 : 0
-                );
-            }
-
-            if (xBinRandomValue + yBinRandomValue + zBinRandomValue > 1)
-            {
-                return new Vector3(
-                    xBinRandomValue,
-                    yBinRandomValue,
-                    zBinRandomValue
-                );
-            }
-
-            return new Vector3(1, Random.Range(0, 2), 1);
-        }
-
-        private bool IsHoming()
-        {
-            return features.homingSpeed > 0 && !target.IsDead();
-        }
-
-        private void Update()
-        {
-            if (features == null) return;
-
-            if (features.isChild) return;
-
-            UpdatePosition();
-            if (features.isRotational)
-            {
-                UpdateRotation();
-            }
-        }
-
-        private Vector3 GetAimLocation()
-        {
-            CapsuleCollider targetCapsule = target.GetComponent<CapsuleCollider>();
-            if (targetCapsule == null)
-            {
-                return target.transform.position;
-            }
-            return target.transform.position;
         }
 
         protected void DestroyFloatingObject()
@@ -148,6 +84,68 @@ namespace MoonHop.FloatingObjects
             target.TakeDamage(effectValue);
             ShowHitEffect();
             DestroyFloatingObject();
+        }
+
+        private void Awake()
+        {
+            target = GameObject.FindWithTag("Player").GetComponent<Health>();
+            journeyPhysics = GameObject.FindWithTag("GameController").GetComponent<JourneyPhysics>();
+            scorePersistentObject = GameObject.FindObjectOfType<Score>();
+        }
+
+        private Vector3 getRotationRandomVector()
+        {
+            int xBinRandomValue = Random.Range(0, 2);
+            int yBinRandomValue = Random.Range(0, 2);
+            int zBinRandomValue = Random.Range(0, 2);
+
+            if (features.rotateOnlyX || features.rotateOnlyY || features.rotateOnlyZ)
+            {
+                return new Vector3(
+                    features.rotateOnlyX ? 1 : 0,
+                    features.rotateOnlyY ? 1 : 0,
+                    features.rotateOnlyZ ? 1 : 0
+                );
+            }
+
+            if (xBinRandomValue + yBinRandomValue + zBinRandomValue > 1)
+            {
+                return new Vector3(
+                    xBinRandomValue,
+                    yBinRandomValue,
+                    zBinRandomValue
+                );
+            }
+
+            return new Vector3(1, Random.Range(0, 2), 1);
+        }
+
+        private bool IsHoming()
+        {
+            return features.homingSpeed > 0 && !target.IsDead();
+        }
+
+        private void Update()
+        {
+            if (features == null) return;
+
+            if (features.isChild) return;
+
+            UpdatePosition();
+            if (features.isRotational)
+            {
+                UpdateRotation();
+            }
+        }
+
+        private Vector3 GetAimLocation()
+        {
+            CapsuleCollider targetCapsule = target.GetComponent<CapsuleCollider>();
+            if (targetCapsule == null)
+            {
+                return target.transform.position;
+            }
+            return target.transform.position;
         }
     }
 }

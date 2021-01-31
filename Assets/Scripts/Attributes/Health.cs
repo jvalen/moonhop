@@ -14,22 +14,15 @@ namespace MoonHop.Attributes
         [SerializeField] AudioSource music = null;
         [SerializeField] ParticleSystem rocketLeftParticle = null;
         [SerializeField] ParticleSystem rocketRightParticle = null;
-        int healthPoints = 100;
-        int hits = 0;
-        PickupItem pickupItem = null;
-        Hits hitsPersistentObject = null;
-        bool isDead = false;
 
         public event Action onTakenDamage;
         public event Action onDead;
 
-        private void Awake()
-        {
-            pickupItem = GetComponent<PickupItem>();
-            pickupItem.onPickupItemHealth += HealthPowerUp;
-            hitsPersistentObject = GameObject.FindObjectOfType<Hits>();
-            UpdateHitsTaken(hits);
-        }
+        int healthPoints = 100;
+        int hits = 0;
+        bool isDead = false;
+        PickupItem pickupItem = null;
+        Hits hitsPersistentObject = null;
 
         public void TakeDamage(int damage)
         {
@@ -50,11 +43,6 @@ namespace MoonHop.Attributes
             }
         }
 
-        private void UpdateHitsTaken(int hitsTaken)
-        {
-            hitsPersistentObject.SetHits(hitsTaken);
-        }
-
         public int GetHealthPoints()
         {
             return healthPoints;
@@ -70,6 +58,25 @@ namespace MoonHop.Attributes
             return isDead;
         }
 
+        public void HealthPowerUp(int healthIncrease)
+        {
+            healthPowerupSound.Play();
+            healthPoints = Math.Min(healthPoints + healthIncrease, GetMaxHealthPoints());
+        }
+
+        private void Awake()
+        {
+            pickupItem = GetComponent<PickupItem>();
+            pickupItem.onPickupItemHealth += HealthPowerUp;
+            hitsPersistentObject = GameObject.FindObjectOfType<Hits>();
+            UpdateHitsTaken(hits);
+        }
+
+        private void UpdateHitsTaken(int hitsTaken)
+        {
+            hitsPersistentObject.SetHits(hitsTaken);
+        }
+
         private void DeadSequence()
         {
             isDead = true;
@@ -78,12 +85,6 @@ namespace MoonHop.Attributes
             rocketRightParticle.Stop();
             gameoverSound.Play();
             onDead();
-        }
-
-        public void HealthPowerUp(int healthIncrease)
-        {
-            healthPowerupSound.Play();
-            healthPoints = Math.Min(healthPoints + healthIncrease, GetMaxHealthPoints());
         }
     }
 }

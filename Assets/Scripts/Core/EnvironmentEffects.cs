@@ -9,10 +9,9 @@ namespace MoonHop.Core
         [SerializeField] ParticleSystem moveToNextLayerEffect = null;
         [SerializeField] AudioSource moveToNextLayerSound = null;
         [SerializeField] float changeLayerEffectTime = 5f;
-        private ParticleSystemRenderer psr;
-
 
         JourneyPhysics journeyPhysics = null;
+        private ParticleSystemRenderer psr;
 
         private void Awake()
         {

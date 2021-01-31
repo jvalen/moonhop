@@ -7,8 +7,9 @@ namespace MoonHop.UI
 {
     public class Blinking : MonoBehaviour
     {
-        JourneyPhysics journeyPhysics = null;
         [SerializeField] TextMeshProUGUI blinkingText = null;
+
+        JourneyPhysics journeyPhysics = null;
         int blinkingTime = 4;
 
         private void Awake()
