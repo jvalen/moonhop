@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using MoonHop.FloatingObjects.Items;
+﻿using MoonHop.FloatingObjects.Items;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace MoonHop.Core
 {

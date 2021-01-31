@@ -1,5 +1,4 @@
-﻿using System;
-using MoonHop.Core;
+﻿using MoonHop.Core;
 using TMPro;
 using UnityEngine;
 

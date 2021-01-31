@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using MoonHop.Attributes;
+﻿using MoonHop.Attributes;
 using MoonHop.Core;
 using MoonHop.Saving;
 using UnityEngine;
