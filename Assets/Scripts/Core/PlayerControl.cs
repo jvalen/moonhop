@@ -27,6 +27,9 @@ namespace MoonHop.Core
         [SerializeField] Animator playerAnimator;
         [SerializeField] Animator coreAnimator;
 
+        [SerializeField] GameObject joystickContainer;
+        [SerializeField] Joystick joystick;
+
         Health health = null;
         float xThrow, yThrow;
         float deadAnimationTime = 6f;
@@ -39,6 +42,11 @@ namespace MoonHop.Core
 
         private void Awake()
         {
+            if (!Application.isMobilePlatform)
+            {
+                joystickContainer.gameObject.SetActive(false);
+            }
+
             health = GameObject.FindWithTag("Player").GetComponent<Health>();
             health.onDead += Falling;
         }
@@ -63,12 +71,12 @@ namespace MoonHop.Core
 
         private void ProcessTranslation()
         {
-            xThrow = Input.GetAxis("Horizontal");
+            xThrow = Application.isMobilePlatform ? joystick.Horizontal : Input.GetAxis("Horizontal");
             float xOffset = xThrow * controlSpeed * Time.deltaTime;
             float rawXPos = transform.localPosition.x + xOffset;
             float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
 
-            yThrow = Input.GetAxis("Vertical");
+            yThrow = Application.isMobilePlatform ? joystick.Vertical : Input.GetAxis("Vertical");
             float yOffset = yThrow * controlSpeed * Time.deltaTime;
             float rawYPos = transform.localPosition.y + yOffset;
             float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
